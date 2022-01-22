@@ -18,7 +18,7 @@ class HomePage extends BasePage {
     }
 }
 
-describe('Abstract with classes', () => {
+describe('Abstraction with classes', () => {
     before(function() {
         //runs before all tests inside describe
         //setup test data or test context
@@ -39,7 +39,14 @@ describe('Abstract with classes', () => {
         //runs after each it block in the describe
     })
 
-    it('Should scroll down and up on the page', () => {
+    it('1st IT', () => {
+        HomePage.scrollToBottom()
+        HomePage.wait(5000)
+        HomePage.scrollToTop()
+        HomePage.wait(3000)
+    })
+
+    it('2nd IT', () => {
         HomePage.scrollToBottom()
         HomePage.wait(5000)
         HomePage.scrollToTop()
